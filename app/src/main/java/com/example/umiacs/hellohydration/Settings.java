@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.content.SharedPreferences;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class Settings extends AppCompatActivity {
         final EditText weightField = (EditText) findViewById(R.id.weightField);
 
         //set up save button
-        Button saveButton = (Button) findViewById(R.id.saveButton);
+        ImageButton saveButton = (ImageButton) findViewById(R.id.saveButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

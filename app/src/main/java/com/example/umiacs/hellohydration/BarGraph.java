@@ -49,12 +49,12 @@ public class BarGraph extends AppCompatActivity /*implements OnChartValueSelecte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_bargraph);
-        /*Create the bar chart
+        /*Cregate the bar chart
          * If no data is recorded this should say "Start drinking!"
          */
         barChart = (BarChart) findViewById(R.id.bargraph);
         barChart.setNoDataText("Start drinking!");
-
+        getSupportActionBar().setTitle("Weekly Progress");
         checkView = 0;
         setBars();
     }
@@ -306,6 +306,8 @@ public class BarGraph extends AppCompatActivity /*implements OnChartValueSelecte
                 //set a listener if bars are clicked
                 barChart.setHighlightPerTapEnabled(true);
                 barChart.setClickable(true);
+                TextView date = (TextView) findViewById(R.id.date);
+                date.setText("Sun Nov 27 - Sat Dec 3");
                 barChart.invalidate();
             }
 
